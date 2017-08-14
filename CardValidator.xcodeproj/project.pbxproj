@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A715B6851F29C7E40017DBA2 /* CardExpirationValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A715B6841F29C7E40017DBA2 /* CardExpirationValidator.swift */; };
+		A7E83DC11F276DE200E5CF48 /* CardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E83DC01F276DE200E5CF48 /* CardType.swift */; };
 		A7FA4ED31F272BBB000334F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FA4ED21F272BBB000334F5 /* AppDelegate.swift */; };
 		A7FA4ED51F272BBB000334F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FA4ED41F272BBB000334F5 /* ViewController.swift */; };
 		A7FA4ED81F272BBB000334F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7FA4ED61F272BBB000334F5 /* Main.storyboard */; };
@@ -14,6 +16,7 @@
 		A7FA4EDD1F272BBB000334F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7FA4EDB1F272BBB000334F5 /* LaunchScreen.storyboard */; };
 		A7FA4EE81F272BBB000334F5 /* CardValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FA4EE71F272BBB000334F5 /* CardValidatorTests.swift */; };
 		A7FA4EF31F272BBB000334F5 /* CardValidatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FA4EF21F272BBB000334F5 /* CardValidatorUITests.swift */; };
+		A7FA4F011F272BF4000334F5 /* CardValidatorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FA4F001F272BF4000334F5 /* CardValidatorTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A715B6841F29C7E40017DBA2 /* CardExpirationValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardExpirationValidator.swift; sourceTree = "<group>"; };
+		A7E83DC01F276DE200E5CF48 /* CardType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardType.swift; sourceTree = "<group>"; };
 		A7FA4ECF1F272BBB000334F5 /* CardValidator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardValidator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7FA4ED21F272BBB000334F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7FA4ED41F272BBB000334F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +52,7 @@
 		A7FA4EEE1F272BBB000334F5 /* CardValidatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardValidatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7FA4EF21F272BBB000334F5 /* CardValidatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardValidatorUITests.swift; sourceTree = "<group>"; };
 		A7FA4EF41F272BBB000334F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7FA4F001F272BF4000334F5 /* CardValidatorTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardValidatorTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,9 @@
 			children = (
 				A7FA4ED21F272BBB000334F5 /* AppDelegate.swift */,
 				A7FA4ED41F272BBB000334F5 /* ViewController.swift */,
+				A715B6841F29C7E40017DBA2 /* CardExpirationValidator.swift */,
+				A7FA4F001F272BF4000334F5 /* CardValidatorTextField.swift */,
+				A7E83DC01F276DE200E5CF48 /* CardType.swift */,
 				A7FA4ED61F272BBB000334F5 /* Main.storyboard */,
 				A7FA4ED91F272BBB000334F5 /* Assets.xcassets */,
 				A7FA4EDB1F272BBB000334F5 /* LaunchScreen.storyboard */,
@@ -260,7 +269,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7FA4ED51F272BBB000334F5 /* ViewController.swift in Sources */,
+				A7E83DC11F276DE200E5CF48 /* CardType.swift in Sources */,
 				A7FA4ED31F272BBB000334F5 /* AppDelegate.swift in Sources */,
+				A7FA4F011F272BF4000334F5 /* CardValidatorTextField.swift in Sources */,
+				A715B6851F29C7E40017DBA2 /* CardExpirationValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +519,7 @@
 				A7FA4EF91F272BBB000334F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A7FA4EFA1F272BBB000334F5 /* Build configuration list for PBXNativeTarget "CardValidatorTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +528,7 @@
 				A7FA4EFC1F272BBB000334F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A7FA4EFD1F272BBB000334F5 /* Build configuration list for PBXNativeTarget "CardValidatorUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +537,7 @@
 				A7FA4EFF1F272BBB000334F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

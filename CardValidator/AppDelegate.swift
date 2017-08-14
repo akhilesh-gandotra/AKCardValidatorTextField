@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  CardValidator
 //
-//  Created by soc-macmini-45 on 25/07/17.
-//  Copyright © 2017 soc-macmini-45. All rights reserved.
+//  Created by Akhilesh Gandotra on 25/07/17.
+//  Copyright © 2017 Akhilesh. All rights reserved.
 //
 
 import UIKit

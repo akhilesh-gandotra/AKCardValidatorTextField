@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CardValidator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,56 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DWo-XH-ai4" customClass="CardValidatorTextField" customModule="CardValidator" customModuleProvider="target">
+                                <rect key="frame" x="10" y="30" width="355" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="gYB-2q-g2F"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kvt-0H-CTn" customClass="CardExpirationValidator" customModule="CardValidator" customModuleProvider="target">
+                                <rect key="frame" x="10" y="147" width="355" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="G5x-x0-m3S"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LiF-m5-dMG">
+                                <rect key="frame" x="152.5" y="241" width="70" height="30"/>
+                                <state key="normal" title="Get String">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnACtion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GGV-DH-MV6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Kvt-0H-CTn" firstAttribute="trailing" secondItem="DWo-XH-ai4" secondAttribute="trailing" id="4kR-tr-4sG"/>
+                            <constraint firstItem="LiF-m5-dMG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R60-xY-gyK"/>
+                            <constraint firstItem="Kvt-0H-CTn" firstAttribute="leading" secondItem="DWo-XH-ai4" secondAttribute="leading" id="ahA-RO-7L5"/>
+                            <constraint firstItem="LiF-m5-dMG" firstAttribute="top" secondItem="Kvt-0H-CTn" secondAttribute="bottom" constant="64" id="dkI-Vx-nH4"/>
+                            <constraint firstAttribute="trailing" secondItem="DWo-XH-ai4" secondAttribute="trailing" constant="10" id="gWU-Hv-TSy"/>
+                            <constraint firstItem="DWo-XH-ai4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="mYb-YV-yqe"/>
+                            <constraint firstItem="Kvt-0H-CTn" firstAttribute="centerX" secondItem="DWo-XH-ai4" secondAttribute="centerX" id="rnx-MS-E9I"/>
+                            <constraint firstItem="DWo-XH-ai4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="uTS-zp-Jzo"/>
+                            <constraint firstItem="Kvt-0H-CTn" firstAttribute="top" secondItem="DWo-XH-ai4" secondAttribute="bottom" constant="67" id="yCl-Qm-Vta"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="expiryTextFiel" destination="Kvt-0H-CTn" id="CpU-US-JvX"/>
+                        <outlet property="textField" destination="DWo-XH-ai4" id="EUw-d1-xsU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-74" y="54"/>
         </scene>
     </scenes>
 </document>
