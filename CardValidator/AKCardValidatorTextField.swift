@@ -27,7 +27,7 @@ extension String {
     }
 }
 
-class CardValidatorTextField : UITextField {
+class AKCardValidatorTextField : UITextField {
     
     //MARK: Properties
     public var validatorCallBack: ((CardResult) -> Void)?

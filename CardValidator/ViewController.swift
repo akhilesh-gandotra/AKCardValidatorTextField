@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var expiryTextFiel: CardExpirationValidator!
-    @IBOutlet weak var textField: CardValidatorTextField!
+    @IBOutlet weak var textField: AKCardValidatorTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
